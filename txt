@@ -1,0 +1,3 @@
+source .venv/Scripts/activate
+deactivate
+flask --app app run

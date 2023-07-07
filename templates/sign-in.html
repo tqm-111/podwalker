@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Sign In</title>
+{% endblock %}
+
+{% block body %}
+
+<header class="header">
+    <div class="nav">
+        <a class="logo" href="/"><img src="static/images/logo.png" alt="PodWalker logo" width="300"></a>
+        <nav>
+            <a href="/create">Create</a>
+            <a href="/podcast-list">List</a>
+            <a href="/sign-in"><img src="static/images/user.png" alt="User" width="30" height="30"></a>
+        </nav>
+    </div>
+</header>
+
+<div class="signin-container">
+    <div class="form">
+        <form id="create-form" action="">
+            <label for="email" class="signin-field">Email:</label>
+            <input type="text" id="username" name="email">
+            <label for="password" class="signin-field">Password:</label>
+            <input type="text" id="password" name="password">
+            <button onclick="location.href='/create'" type="button" id="sign-in-button">Sign In</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

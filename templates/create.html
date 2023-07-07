@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Create Podcast</title>
+{% endblock %}
+
+{% block body %}
+
+<header class="header">
+    <div class="nav">
+        <a class="logo" href="/"><img src="static/images/logo.png" alt="PodWalker logo" width="300"></a>
+        <nav>
+            <a href="/create">Create</a>
+            <a href="/podcast-list">List</a>
+            <a href="/sign-in"><img src="static/images/user.png" alt="User" width="30" height="30"></a>
+        </nav>
+    </div>
+</header>
+
+<div class="create-hero">
+    <div class="create-hero-container">
+        <div class="create-h1-container">
+            <h1>create your own podcast</h1>
+        </div>
+    </div>
+</div>
+
+<div class="form-container">
+    <div class="form">
+        <form method="post" id="create-form">
+            <label for="podcast-topic" class="field">Type in any topic that you like:</label>
+            <textarea type="text" id="podcast-topic" name="podcast-topic"></textarea>
+            <label for="podcast-language" class="field">Choose the language of the podcast:</label>
+            <select name="podcast-language" id="podcast-language">
+              <option value="English">English</option>
+              <option value="Japanese">Japanese</option>
+              <option value="Spanish">Spanish</option>
+              <option value="Vietnamese">Vietnamese</option>
+              <option value="German">German</option>
+            </select>
+            <label for="podcast-length" class="field">Choose a length for the podcast:</label>
+            <select name="podcast-length" id="podcast-length">
+              <option value="short">Short (~3min)</option>
+              <option value="medium">Medium (~5min)</option>
+              <option value="long">Long (~7min)</option>
+            </select> 
+            <button type="submit" id="create-button">Create</button>
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

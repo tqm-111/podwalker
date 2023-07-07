@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Your Podcasts</title>
+{% endblock %}
+
+{% block body %}
+
+<header class="header">
+    <div class="nav">
+        <a class="logo" href="/"><img src="static/images/logo.png" alt="PodWalker logo" width="300"></a>
+        <nav>
+            <a href="/create">Create</a>
+            <a href="/podcast-list">List</a>
+            <a href="/sign-in"><img src="static/images/user.png" alt="User" width="30" height="30"></a>
+        </nav>
+    </div>
+</header>
+
+<div class="list-hero">
+    <div class="list-hero-container">
+        <div class="list-h1-container">
+            <h1>your podcast list</h1>
+        </div>
+    </div>
+</div>
+
+<div class="podcast-container">
+    <div class="podcast-list">
+        {% for podcast in podcasts %}
+            <div class="each-podcast">
+                <h2 class="each-podcast-name">{{ podcast }}</h2>
+                <audio controls>
+                    <source src="{{ url_for('static', filename=podcast) }}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock %}

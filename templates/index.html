@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>PodWalker</title>
+{% endblock %}
+
+{% block body %}
+
+<header class="header">
+    <div class="nav">
+        <a class="logo" href="/"><img src="static/images/logo.png" alt="PodWalker logo" width="300"></a>
+        <nav>
+            <a href="/create">Create</a>
+            <a href="/podcast-list">List</a>
+            <a href="/sign-in"><img src="static/images/user.png" alt="User" width="30" height="30"></a>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="hero-container">
+        <div class="h1-container">
+            <h1>podcast your way</h1>
+        </div>
+        <div class="button-container">
+            <form>
+                <button formaction="/create">Start Here</button>
+            </form>        
+        </div>
+    </div>
+</div>
+
+<div class="h2">
+    <div class="h2-container">
+        <h2>revolutionize the way you <span style="color: #FF8C21">listen</span></h2>
+    </div>
+</div>
+
+<div class="features">
+    <div class="features-container">
+        <div class="row1">
+            <h3>type in any topic you like</h3>
+            <p>Feeling constrained by the selection of podcast on Spotify? With PodWalker, you can generate podcasts about any topic that you like, whether entertainment, sport, technology, business, art, culture, and much more. Let your curiosity run wild!</p>
+            <img src="static/images/Prop1.png" alt="prop">
+        </div>
+        <div class="row2">
+            <div class="col1">
+                <div class="top">
+                    <h3>choose language and length</h3>
+                    <p>Customize the podcast by selecting the language and the length. Such a fun way to learn a new language isn't it?</p>
+                </div>
+                <img src="static/images/Prop3.png" alt="prop">
+            </div>
+            <div class="col2">
+                <div class="top">
+                    <h3>listen on the go!</h3>
+                    <p>Save the podcast on PodWalker mobile app and listen on the commute, while working out, or even while doing house chores. PodWalker is always with you.</p>
+                </div>
+                <img src="static/images/Prop2.png" alt="prop">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
